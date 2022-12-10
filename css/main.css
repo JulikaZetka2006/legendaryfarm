@@ -1,0 +1,316 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+*{
+    box-sizing: border-box;
+}
+.header{
+    max-width: 1110px;
+    margin: 0 auto;
+    padding-top: 60px;
+}
+.container{
+    max-width: 1110px;
+    margin: 0 auto;
+    padding-bottom: 120px;
+}
+.wrapper {
+    margin-top: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    line-height: 68px;
+    color: #000000;
+}
+p{
+    margin: 0;
+}
+h1{
+    font-size: 50px;
+}
+.one_section_container{
+    width: 420px;
+}
+
+h2{
+    font-size: 40px;
+    text-align: center;
+}
+.inside_h2{
+    text-align: center;
+    margin-bottom: 70px;
+}
+h3{
+    font-size: 30px;
+}
+.text_container{
+    margin-bottom:30px;
+    margin-top:30px;
+}
+p{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #000000;
+    margin: 0;
+}
+.button {
+    background: #FF6861;
+    border-radius: 100px;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    padding: 22px 0;
+    font-weight: 700;
+    line-height: 1.19em;
+    display: block;
+    width: 216px;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+.button:hover{
+    background: #fa918c;
+}
+.wrapper .button:hover{
+    width: 450px;
+}
+.save_animals .button:hover{
+    background: #fa918c;
+    width: 330px;
+}
+.inside{
+    max-width: 720px;
+    margin: 0 auto;
+    margin-top: 70px;
+}
+.description{
+    display: flex;
+    gap:34px;
+    margin-bottom: 41px;
+}
+.description_text{
+    width:613px; 
+}
+.save_animals{
+    display: flex;
+    align-items: center;
+    background: linear-gradient(102deg, #FFF6DF 17.38%, #FFDFDE 81.25%);
+    border-radius: 60px;
+    gap: 200px;
+    padding-left: 122px;
+    padding-bottom: 75px;
+    padding-top:76px;
+}
+.save_animals_text{
+    width: 475px;
+}
+.save_animals h2{
+    text-align: left;
+}
+footer{
+    font-size: 15px;
+    text-align: center;
+}
+
+/* Responsive */
+/* Large: 992px - 1199px */
+@media (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+}
+/* Medium: 768px - 991px */
+@media (max-width: 991px) {
+    .container {
+        max-width: 720px;
+    }
+    .header img{
+        margin: 0 auto;
+    }
+    .wrapper {
+        margin-top: 82px;
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+        gap: 51px;
+   }
+   .one_section_container {
+        text-align: center;
+    }
+    .button {
+        margin: 0 auto;
+    }
+    .inside{
+        text-align: center;
+    }
+    .save_animals{
+        flex-direction: column-reverse;
+        text-align: center;
+        gap:101px;
+        padding-top: 101px;
+        padding-bottom: 101px;
+        padding-left: 144px;
+        padding-right: 144px; 
+    }
+    .save_animals h2 {
+        text-align: center;
+    }
+    .save_animals_text{
+        padding: 0;
+        margin: 0;
+    }
+} 
+/* Small: 576px - 767px */
+@media (max-width: 767px) {
+    .container {
+        max-width: 540px;
+    }
+    .description{
+        flex-direction: column;
+        text-align: center;
+        width: auto;
+    }
+    .description_text{
+        width: auto;
+    }
+    .description img{
+        width: 73px;
+        margin: 0 auto;
+    }
+    .save_animals{
+        padding-top: 101px;
+        padding-bottom: 101px;
+        padding-left: 144px;
+        padding-right: 144px; 
+    }
+} 
+/* Extra small: 0px (320px) - 575px */
+@media (max-width: 575px) {
+    .container {
+        padding: 0 15px;
+        margin-bottom: 90px;
+    }
+    h1 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+    h2 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    h3 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .header{
+        margin-bottom: 50px;
+    }
+    .one_section_container{
+        width: auto;
+    }
+    div.wrapper{
+        gap: 51px;
+    }
+    .save_animals img{
+        max-width: 287px;
+    }
+    .save_animals_text{
+        padding: 0;
+        margin: 0;
+        margin-bottom: 70px;
+        width: auto;
+    }
+   .save_animals{
+    padding-top: 101px;
+    padding-bottom: 101px;
+    padding-left: 144px;
+    padding-right: 144px;   
+    }
+}
